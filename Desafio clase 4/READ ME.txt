@@ -1,0 +1,2 @@
+En este simulador interactivo aplique los conceptos aprendidos en las anteriores clases, y elabore un codigo donde un usuario indica cuantos productos va a comprar
+y su repectivo precio,si el subtotal supera los $5000 se le aplicara un descuento del 20%.
