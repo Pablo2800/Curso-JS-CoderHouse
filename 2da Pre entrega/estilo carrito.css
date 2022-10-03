@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background:#63CAA7;
+}
+div.product-card {
+    width: 280px;
+    height: auto;
+    margin: 1%;
+    padding-bottom:1%;
+    padding-top: 1%;
+    background-color: rgb(201, 228, 245);
+    border: 2px solid #000 ;
+    display: inline-block;
+}
+div.product-card:hover{
+    background-color: rgb(129, 137, 172);
+}
+#objetosCart{
+    text-align: center;
+    width: 70%;
+    height: auto;
+    margin-left:300px;
+}
+div.product-card .btnAgregado:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(5, 5, 5);
+}
+div.product-card img{
+    width: 60%;
+    height: 150px;
+    object-fit: cover;
+}
+.barra label{
+ font-size: 30px;
+ margin-left: 510px;
+ margin-top: 200px;
+}
+a:link{
+    text-decoration: none;
+    color: #000;
+}
+a:active{
+    color: #000;
+}
+.barra{
+    background-color: #ffe3b3;
+    border: 2px solid rgb(10, 10, 10) ;
+    width: 65%;
+    margin-left: 380px;
+    display: inline-block;
+}
+.barra .actualizar{
+    font-size: 15px;
+    margin-left: 1100px;
+    margin-bottom: 20px;
+    text-decoration: none; 
+}
+header{
+    background:#63CAA7;
+    width: 60%;
+    height: auto;
+    margin-left: 400px;
+    text-align: center;
+    padding: 10px;
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul li{
+    float: left;
+}
+header nav ul li a{
+    padding:10px 20px;
+    display:block;
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+}
+header nav ul li a:hover{
+    background: #26798e;
+}
+header nav{
+    background: #ffe3b3;
+    overflow: hidden;
+    margin-top:40px;
+    border: 2px solid #000 ;
+}
+
+.cart{
+    background: #26798e;
+}
+
+div.total h2{
+    background: #ffe3b3;
+    padding: 10px;
+    display: inline-block;
+    text-align: left;
+}
+
+div.total{
+    margin-bottom: 100px;
+    background-color: #ffe3b3;
+    border: 2px solid #000 ;
+    width: 65%;
+    margin-left: 380px;
+}
+div.total .confirm{
+    font-size: 15px;
+    margin-left: 800px;
+}
+div.total .confirm:hover {
+    background-color: #79a7b1;
+    color:#000
+}
+nav ul li.carrit{
+    background-color: #5aa5b8;
+}
+nav ul li.carrit :hover{
+    background-color:#26798e;
+}
