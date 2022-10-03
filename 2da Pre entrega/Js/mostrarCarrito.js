@@ -33,27 +33,25 @@ carrito.forEach((producto) => {
   totalCarrito.children[0].innerText = `Total a pagar: $${total}`;
   totalCarrito.querySelector(".confirm").innerText = "CONFIRMAR COMPRA";
   totalCarrito.querySelector(".confirm").addEventListener("click", () => {
-    const { value: email } = Swal.fire({
-      title: 'Input email address',
-      input: 'email',
-      inputLabel: 'Your email address',
-      inputPlaceholder: 'Enter your email address'
-    })
-    if (email) {
-      Swal.fire(`Entered email: ${email}`)
-    }
-    /*Swal.fire({
-      icon: "success",
-      title: "COMPRA CONFIRMADA",
-      text: "Muchas gracias por su compra",
-      footer: '<button class="ticket">Ticket de compra</button>',
-    });*/
-
-  let ticketBut=document.querySelector(".ticket")
-    ticketBut.addEventListener("click", () => {
-    Swal.fire(`Ticket de compra Numero:${Math.round(Math.random()*1000000000)}`)
-    })
+  const { value: formValues } =Swal.fire({
+  title: 'Para continuar con la compra debe registrarse',
+  html:
+    `<h3>Ingrese email</h3>`+
+    '<input id="swal-input1" class="swal2-input">' +
+    `<h3>Ingrese contraseña</h3>`+
+    '<input id="swal-input2" class="swal2-input">',
+  focusConfirm: false,
+  preConfirm: () => {
+    return [
+      document.getElementById('swal-input1').value,
+      document.getElementById('swal-input2').value
+    ]
+  }
+})
+if (formValues) {
+  Swal.fire(JSON.stringify(formValues))
+}
   });
 });
-
+  
 
