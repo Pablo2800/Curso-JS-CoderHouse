@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer sitio web con CSS</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logotipo">
+            <img src="https://png.pngitem.com/pimgs/s/21-215896_imagenes-tumblr-png-alien-png-transparent-png.png" width="100" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Catalogo</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <form>
+            <label>Nombre</label>
+            <input id="formName" />
+      
+            <label>Correo electrónico</label>
+            <input id="formMail" />
+            <button type="submit">Enviar</button>
+          </form>
+    </header>
+    <section id="objetos">
+        <template>
+            <div class="product-card">
+                <h3 class="bg-blue">Producto</h3>
+                <!-- <img src="..." alt="Imagen de algo"> -->
+                <p>precio</p>
+                <p>detalle</p>
+                <button id="btnAgregado">Comprar</button>
+            </div>
+        </template>    
+    </section>
+    <section class="main">
+        <section class="articles">
+            <article>
+                <h2>Este es el titulo de mi sitio web</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ducimus blanditiis quas dolores quibusdam fugiat voluptatum asperiores aliquid recusandae. Eveniet quaerat id, consequatur cupiditate praesentium nostrum libero atque vitae quas.</p>               
+            </article>
+            <article>
+                <h2>Este es el titulo de mi sitio web</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ducimus blanditiis quas dolores quibusdam fugiat voluptatum asperiores aliquid recusandae. Eveniet quaerat id, consequatur cupiditate praesentium nostrum libero atque vitae quas.</p>               
+            </article>
+        </section>
+        <aside>
+            <h3>Este es mi sidebar</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque enim eos voluptatibus cupiditate architecto non, molestias nam ullam minima tempore ex sint neque voluptates ipsam itaque at, nihil culpa omnis?</p>
+        </aside>
+    </section>
+    <div id="lista carrito"></div>
+    <footer>
+        <p>Pablo Palazzetti SitioWeb</p>
+    </footer>
+    <script src="./eventos.js"></script>
+</body>
+</html>
