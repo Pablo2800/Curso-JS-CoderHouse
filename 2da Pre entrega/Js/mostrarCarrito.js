@@ -33,7 +33,13 @@ carrito.forEach((producto) => {
   totalCarrito.children[0].innerText = `Total a pagar: $${total}`;
   totalCarrito.querySelector(".confirm").innerText = "CONFIRMAR COMPRA";
   totalCarrito.querySelector(".confirm").addEventListener("click", () => {
-  const { value: formValues } =Swal.fire({
+    Swal.fire({
+      icon: 'success',
+      title: 'COMPRA CONFIRMADA',
+      text: 'Muchas gracias por su compra',
+      footer: '<a href="./main.html">Seguir comprando</a>'
+    })
+  /*const { value: formValues } =Swal.fire({
   title: 'Para continuar con la compra debe registrarse',
   html:
     `<h3>Ingrese email</h3>`+
@@ -50,7 +56,7 @@ carrito.forEach((producto) => {
 })
 if (formValues) {
   Swal.fire(JSON.stringify(formValues))
-}
+}*/
   });
 });
   
