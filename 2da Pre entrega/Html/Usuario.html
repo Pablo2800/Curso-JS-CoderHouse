@@ -7,25 +7,25 @@
     <title>Ingreso</title>
 </head>
 <body>
-    <h2>Registro User</h3>
-    <form>
-        <label>Nombre</label>
-        <input id="formName" />
-        <label>Correo electrónico</label>
-        <input id="formMail" />
-        <label>Contraseña</label>
-        <input id="contraseña" />
-        <label>Confirmar Contraseña</label>
-        <input id="confirm" />
-        <button type="submit">Enviar</button>
-    </form>
-    <h3>Login user</h3>
-    <form>
-        <label>Usuario</label>
-        <input id="user" />
-        <label>Contraseña</label>
-        <input id="contraseñaUser" />
-    </form>
+   <form action="" method="post" id="form">
+    <div class="form">
+        <h1>Registro</h1>
+        <div class="grupo">
+            <input type="text" name="" id="name"><span class="barra"></span>
+            <label for="">Nombre</label>
+        </div>
+        <div class="grupo">
+            <input type="email" name="" id="email"><span class="barra"></span>
+            <label for="">Email</label>
+        </div>
+        <div class="grupo">
+            <input type="password" name="" id="password"><span class="barra"></span>
+            <label for="">Password</label>
+        </div>
+        <button type="submit">Suscribirte</button>
+        <p class="warnings" id="warnings"></p>
+    </div>
+   </form>
     <script src="/2da Pre entrega/Js/Registro.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>

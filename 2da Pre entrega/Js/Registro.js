@@ -1,43 +1,11 @@
-/*datosU.addEventListener("input", (e) => {
-    console.log(e.target.value);
-});
+const nombre=document.querySelector("#name")
+const email=document.querySelector("#email")
+const password=document.querySelector("#password")
+const form=document.querySelector("#form")
+const parrafo=document.querySelector("#warnings")
 
-datosU.addEventListener("blur", (e) => {
-    if (e.target.value === "") {
-        console.log(Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Campo Obligatorio',
-        }));
-    } else {
-        console.log("Validacion Exitosa");
+form.addEventListener("submit",(e)=>{
+    if(nombre.value.lenght<6){
+        console.log("Nombre corto")
     }
-});*/
-
-
-/*datosM.addEventListener("input", (e) => {
-    console.log(e.target.value);
-});
-
-datosM.addEventListener("blur", (e) => {
-    if (e.target.value === "") {
-        console.log(Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Campo Obligatorio',
-        }));
-    } else {
-        console.log("Validacion Exitosa");
-    }
-});*/
-
-const datosU = document.querySelector("#formName");
-const datosM = document.querySelector("#formMail");
-const contra = document.querySelector("#contraseña");
-const confirmContra = document.querySelector("#confirm");
-
-const formulario = document.querySelector("form");
-formulario.addEventListener("submit", validarFormulario);
-function validarFormulario(e) {
-    e.preventDefault();
-}
+})
