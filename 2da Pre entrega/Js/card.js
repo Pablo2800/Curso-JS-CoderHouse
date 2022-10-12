@@ -11,11 +11,17 @@ function cardProduct(array,card){
     cardClonada.children[1].innerText = producto.modelo;
     cardClonada.children[3].innerText = "Precio:$" + producto.precio;
     cardClonada.querySelector(".btnAgregado").innerText="Añadir al carrito"
+    cardClonada.querySelector(".info").innerHTML=`<button class="info"><i class="fa-solid fa-circle-info"></i></button>`
     //cardClonada.querySelector(".stock").innerText=`Stock ${producto.inventario}`
+    cardClonada.querySelector(".info").addEventListener("click", () => {
+      Swal.fire({
+        text: `Producto ${producto.marca}`
+      })
+    })
 
     cardClonada.querySelector(".btnAgregado").addEventListener("click",()=>{
       carrito.push(producto)
-      document.querySelector(".carrit").innerHTML=`<li class="carrit"><a href="./Carrito.html">Carrito (${carrito.length})</a></li>`
+      document.querySelector(".carrit").innerHTML=`<button class="cart"><a href="./Carrito.html"><i class="fa-solid fa-cart-shopping">(${carrito.length})</i></a></button>`
       cardClonada.querySelector(".btnAgregado").textContent="Añadido"
       localStorage.setItem("cart",JSON.stringify(carrito))
       producto.inventario--
@@ -29,4 +35,4 @@ function cardProduct(array,card){
     })
 })
 }
-
+//<i class="fa-solid fa-cart-shopping"></i>

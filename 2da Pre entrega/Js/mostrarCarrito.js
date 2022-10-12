@@ -2,6 +2,15 @@ let showcart = JSON.parse(localStorage.getItem("cart"));
 let sectionCart = document.getElementById("objetosCart");
 let tempCart = document.querySelector("template");
 let cardCart = tempCart.content.querySelector("div");
+
+//Funcion eliminar del carrito
+const eliminarCart = (prodId)=>{
+  const item = carrito.find((producto)=>producto.id === prodId)
+  const indice = carrito.indexOf(item)
+  carrito.splice(indice,1)
+}
+//Actualizar carrito
+const actualizarCarrito=() => {
 carrito.forEach((producto) => {
   let cardCartClonada = cardCart.cloneNode(true);
   sectionCart.appendChild(cardCartClonada);
@@ -10,9 +19,9 @@ carrito.forEach((producto) => {
   cardCartClonada.children[2].src= producto.imagen
   cardCartClonada.children[3].innerText= "$"+producto.precio
   cardCartClonada.querySelector(".btnSacar").innerText="Eliminar del carrito"
-
   cardCartClonada.querySelector(".btnSacar").addEventListener("click", () => {
-    carrito.splice(0,1)
+    //Eliminar Productos
+    eliminarCart(producto.id)
     document.querySelector(".carrit").innerHTML=`<li class="carrit"><a href="./Carrito.html">Carrito (${carrito.length})</a></li>`
     cardCartClonada.remove()
     producto.inventario++
@@ -21,7 +30,10 @@ carrito.forEach((producto) => {
     localStorage.setItem("cart",JSON.stringify(carrito))
     sessionStorage.setItem("totalCart",JSON.stringify(total))
   })
-})
+  })
+}
+//Mostramos los productos del carrito
+actualizarCarrito()
 
 let section2 = document.getElementById("totalCart");
 let temp2 = document.getElementById("templ");

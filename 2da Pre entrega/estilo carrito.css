@@ -51,11 +51,17 @@ a:active{
     width: 65%;
     margin-left: 380px;
     display: inline-block;
+    padding:10px
 }
 .barra .actualizar{
     font-size: 15px;
-    margin-left: 1100px;
-    margin-bottom: 20px;
+    margin-bottom: 3px;
+    text-decoration: none; 
+    margin-left: 330px;
+}
+.barra .vaciar{
+    font-size: 15px;
+    margin-bottom: 10px;
     text-decoration: none; 
 }
 header{
@@ -119,5 +125,26 @@ nav ul li.carrit{
     background-color: #5aa5b8;
 }
 nav ul li.carrit :hover{
+    background: #26798e;
+}
+.info{
+    background-color: rgb(201, 228, 245);
+    font-size: 20px;
+    border-radius: 20px;
+    border:none;
+}
+.info:hover{
+    background-color: rgb(162, 159, 170);
+}
+p{
+    padding-bottom: 5px;
+}
+.cart{
     background-color:#26798e;
+    border: none;
+    width: 127px;
+}
+.carrit{
+    width: 127px;
+    text-align: center;
 }

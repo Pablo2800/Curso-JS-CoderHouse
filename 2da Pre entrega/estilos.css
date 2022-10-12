@@ -14,6 +14,7 @@ header,.main,footer{
 header nav{
     background: #ffe3b3;
     overflow: hidden;
+    border: 2px solid #000 ;
 }
 header nav ul{
     list-style: none;
@@ -99,7 +100,8 @@ div.product-card img{
 }
 div.product-card .btnAgregado{
     display:inline-block;
-    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 div.logotipo img{
     width: 200px;
@@ -142,5 +144,26 @@ nav ul li.carrit{
     background-color: #5aa5b8;
 }
 nav ul li.carrit :hover{
+    background-color:#6566a5;
+}
+.info{
+    background-color: rgb(201, 228, 245);
+    font-size: 20px;
+    border-radius: 20px;
+    border:none;
+}
+.info:hover{
+    background-color: rgb(162, 159, 170);
+}
+p{
+    padding-bottom: 5px;
+}
+.cart{
     background-color:#26798e;
+    border: none;
+    width: 127px;
+}
+.carrit{
+    width: 127px;
+    text-align: center;
 }
