@@ -1,0 +1,14 @@
+[
+    {"id":1,"marca":"Samsung" ,"modelo":"A52" ,"imagen":"https://storage.comprasmartphone.com/smartphones/samsung-galaxy-a52.png" ,"precio":12000 ,"stock":3},
+    {"id":2,"marca":"Samsung" ,"modelo":"A21 S" ,"imagen":"https://images.samsung.com/is/image/samsung/mx-galaxy-a21s-a217-sm-a217mzketce-front-thumb-252472525?$480_480_PNG$" ,"precio":86000 ,"stock":4},
+    {"id":3,"marca":"Motorola" ,"modelo":"G71" ,"imagen":"https://cuyodigital.com/cuyo/wp-content/uploads/2021/11/161713-800-auto.png" ,"precio":68000 ,"stock":5},
+    {"id":4,"marca":"iPhone" ,"modelo":"13 Pro Max" ,"imagen": "https://storage.comprasmartphone.com/smartphones/apple-iphone-13-pro-max.png","precio":430000 ,"stock":4},
+    {"id":5,"marca":"iPhone" ,"modelo":"12" ,"imagen":"https://www.pngplay.com/wp-content/uploads/6/Apple-IPhone-PNG-Photos-Download-Free-PNG.png" ,"precio":300000 ,"stock":4},
+    {"id":6,"marca":"Xiaomi","modelo":"Readmi Note 11" ,"imagen":"https://cdn-xiaomi.waugi.com.ar/1428-thickbox_default/redmi-note-11-pro-6gb-ram-128gb-rom-graphite-gray.jpg" ,"precio":120000 ,"stock":4},
+    {"id":7,"marca":"Huawei" ,"modelo":"P40 Pro" ,"imagen":"https://img01.huaweifile.com/eu/es/huawei/pms/product/6901443378951/428_428_59A45A930B1C9F4B26F7D437DA5B8B994F8CC108CD3A4EC0mp.png" ,"precio":500000 ,"stock":3},
+    {"id":8,"marca":"Motorola" ,"modelo":"G52" ,"imagen": "https://fixechelectronica.com.ar/wp-content/uploads/2022/06/G52-BLANCO.png","precio":60000 ,"stock":4},
+    {"id":9,"marca":"Huawei" ,"modelo":"Mate X2" ,"imagen":"https://ae01.alicdn.com/kf/Hb295d0d6e3bc492485b32069fc82f438N/HUAWEI-tel-fono-inteligente-Mate-X2-celular-con-pantalla-OLED-de-8-pulgadas-12GB-512GB-5G.png" ,"precio":320000 ,"stock":5},
+    {"id":10,"marca":"Xiaomi" ,"modelo":"Mi 11 Ultra" ,"imagen":"https://worldtechnologyecu.com/wp-content/uploads/2021/04/XIAOMIMI11ULTRA.png" ,"precio":230000 ,"stock":5},
+    {"id":11,"marca":"Motorola" ,"modelo":"G9 Plus" ,"imagen":"https://bitwares.net/wp-content/uploads/2020/12/motog9plus-rosachampagne-dual-e1621205795776.png" ,"precio":70000 ,"stock":4},
+    {"id":12,"marca":"Samsung" ,"modelo":"A 71" ,"imagen":"https://storage.comprasmartphone.com/smartphones/samsung-galaxy-a72.png" ,"precio":80000 ,"stock":3}
+]

@@ -15,7 +15,12 @@ function cardProduct(array,card){
     //cardClonada.querySelector(".stock").innerText=`Stock ${producto.inventario}`
     cardClonada.querySelector(".info").addEventListener("click", () => {
       Swal.fire({
-        text: `Producto ${producto.marca}`
+          html:
+          `<li>${producto.camara}</li>
+          <li>${producto.caracteristicas}</li>
+          <li>Bateria: ${producto.bateria}</li>
+          <li>Memoria de ${producto.memoria}</li>`,
+          background:`#ffe3b3`,
       })
     })
 

@@ -51,24 +51,6 @@ carrito.forEach((producto) => {
       text: 'Muchas gracias por su compra',
       footer: '<a href="./main.html">Seguir comprando</a>'
     })
-  /*const { value: formValues } =Swal.fire({
-  title: 'Para continuar con la compra debe registrarse',
-  html:
-    `<h3>Ingrese email</h3>`+
-    '<input id="swal-input1" class="swal2-input">' +
-    `<h3>Ingrese contraseña</h3>`+
-    '<input id="swal-input2" class="swal2-input">',
-  focusConfirm: false,
-  preConfirm: () => {
-    return [
-      document.getElementById('swal-input1').value,
-      document.getElementById('swal-input2').value
-    ]
-  }
-})
-if (formValues) {
-  Swal.fire(JSON.stringify(formValues))
-}*/
   });
 });
   

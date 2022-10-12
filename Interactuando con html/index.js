@@ -1,15 +1,16 @@
-let celulares=[
-    {id:1,marca:"Samsung",modelo:"A50",precio:400},
-    {id:2,marca:"Samsung",modelo:"A40",precio:350},
-    {id:3,marca:"iPhone",modelo:"13",precio:450},
-    {id:4,marca:"iPhone",modelo:"13 Pro Max",precio:550}
-]
+const lista=document.querySelector("#listado")
 
-for(celular of celulares){
-    let bloque=document.createElement("div")
-    bloque.innerHTML=`<h3>Celular: ${celular.marca} ${celular.modelo}</h3>
-    <p>Precio: ${celular.precio}</p>`
-    document.body.appendChild(bloque)
-}
+fetch("./data.json")
+.then((res)=>res.json())
+.then((data)=>{
+  data.forEach((producto) => {
+    const div=document.createElement("div")
+    div.innerHTML=`
+    <h3>${producto.marca}</h3>
+    <h4>${producto.modelo}</h4>
+    <img src="">${producto.imagen}</img>
+    <p>Precio:$${producto.precio}</p>`
+    lista.append(div)
+  })
+})
 
-const text=document.querySelector("p").textContent=("Encontraras muchos celulares de tu gusto")

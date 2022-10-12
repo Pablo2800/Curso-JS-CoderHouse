@@ -55,3 +55,6 @@ footer{
     padding:10px 0px;
     text-align: center;
 }
+div{
+    display: inline-block;
+}
