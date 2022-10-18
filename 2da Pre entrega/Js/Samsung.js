@@ -1,4 +1,4 @@
-let samsung= JSON.parse(sessionStorage.getItem("celSamsung"))
+let samsung = JSON.parse(sessionStorage.getItem("celSamsung"))
 
+cardProduct(samsung, card)
 
-cardProduct(samsung,card)

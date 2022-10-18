@@ -3,7 +3,7 @@
     padding:0;
 }
 body {
-    background:#63CAA7;
+    background-color: #5aa5b8;
 }
 div.product-card {
     width: 280px;
@@ -65,7 +65,7 @@ a:active{
     text-decoration: none; 
 }
 header{
-    background:#63CAA7;
+    background-color: #5aa5b8;
     width: 60%;
     height: auto;
     margin-left: 400px;

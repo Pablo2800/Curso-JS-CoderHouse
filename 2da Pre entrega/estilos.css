@@ -3,10 +3,9 @@
     padding:0;
 }
 body {
-    background:#63CAA7;
+    background:#5aa5b8;
 }
 header,.main,footer{
-    background:#63CAA7;
     width: 90%;
     max-width:1000px;
     margin:20px auto
@@ -141,10 +140,10 @@ div.titulo h1{
  font-size: 23px;
 }
 nav ul li.carrit{
-    background-color: #5aa5b8;
+    background-color:#6566a5;
 }
 nav ul li.carrit :hover{
-    background-color:#6566a5;
+    background-color:#8081c4;
 }
 .info{
     background-color: rgb(201, 228, 245);
@@ -159,11 +158,14 @@ p{
     padding-bottom: 5px;
 }
 .cart{
-    background-color:#26798e;
+    background-color:#6566a5;
     border: none;
     width: 127px;
 }
 .carrit{
     width: 127px;
     text-align: center;
+}
+.body{
+    background-color: #5aa5b8;
 }
