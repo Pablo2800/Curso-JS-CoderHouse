@@ -24,8 +24,8 @@ carrito.forEach((producto) => {
     eliminarCart(producto.id)
     document.querySelector(".carrit").innerHTML=`<li class="carrit"><a href="./Carrito.html">Carrito (${carrito.length})</a></li>`
     cardCartClonada.remove()
-    producto.inventario++
-    localStorage.setItem("stock",JSON.stringify(producto.inventario))
+    producto.stock++
+    sessionStorage.setItem("stock",JSON.stringify(producto.stock))
     total -= producto.precio
     localStorage.setItem("cart",JSON.stringify(carrito))
     sessionStorage.setItem("totalCart",JSON.stringify(total))
@@ -54,4 +54,9 @@ carrito.forEach((producto) => {
   });
 });
   
+let vaciarCart= document.querySelector(".vaciar")
 
+vaciarCart.addEventListener("click",()=>{
+  carrito.length=0
+  actualizarCarrito()
+})

@@ -1,13 +1,16 @@
-let celulares = [];
-
 async function fetchProductos() {
   const resp = await fetch("/2da Pre Entrega/data.json");
   return await resp.json();
 }
+let catalogo=[]
 
+let celulares = [];
 
 fetchProductos().then((productos) => {
-  celulares = productos;
+  celulares = productos.filter((productos)=>{
+    return productos.producto=="celular"
+  });
+
   const samsung = celulares.filter((product) => {
     return product.marca == "Samsung";
   });
@@ -34,6 +37,19 @@ fetchProductos().then((productos) => {
   sessionStorage.setItem("celXiaomi", JSON.stringify(xiaomi));
   sessionStorage.setItem("celHuawei", JSON.stringify(huawei));
   
-  cardProduct(celulares, card);
 });
 
+auriculares=[]
+
+fetchProductos().then((productos) => {
+    auriculares = productos.filter((productos)=>{
+      return productos.producto=="auricular"
+
+    });
+    const auricular = auriculares.filter((product) => {
+      return product.producto == "auricular";
+    });
+
+    sessionStorage.setItem("auriculares",JSON.stringify(auricular));
+
+});

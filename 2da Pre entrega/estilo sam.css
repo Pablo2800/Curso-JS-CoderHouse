@@ -30,7 +30,7 @@ div.product-card .btnAgregado:hover{
     color: rgb(5, 5, 5);
 }
 div.product-card img{
-    width: 60%;
+    width: 80%;
     height: 250px;
     object-fit: cover;
 }
