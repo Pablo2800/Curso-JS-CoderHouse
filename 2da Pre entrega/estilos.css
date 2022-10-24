@@ -1,68 +1,48 @@
 *{
-    margin:0;
-    padding:0;
+    box-sizing: border-box;
 }
 body {
     background:#5aa5b8;
 }
-header,.main,footer{
-    width: 90%;
-    max-width:1000px;
-    margin:20px auto
+header,.menu{
+    width: 60%;
+    margin:0px auto;
+    text-align: center;
 }
-header nav{
+nav{
     background: #ffe3b3;
     overflow: hidden;
     border: 2px solid #000 ;
 }
-header nav ul{
+.menu nav ul{
     list-style: none;
 }
-header nav ul li{
+.menu nav ul li{
     float: left;
 }
-header nav ul li a{
+
+.menu nav ul li a{
     padding:10px 20px;
     display:block;
     color:rgb(0, 0, 0);
     text-decoration: none;
     font-size: 20px;
 }
-header nav ul li a:hover{
+.menu nav ul li a:hover{
     background: #26798e;
 }
-.main .articles {
-    width:68.5%;
-    margin-right: 1.5%;
-    float:left;
-}
-.main .articles article{
-    padding: 20px;
-    background: #fff;
-    margin-bottom: 20px;
-}
-aside{
-    width: 30%;
-    height: 280px;
-    background: rgb(121, 86, 121);
-    color:#fff;
-    float: left;
-    padding: 20px;
-    box-sizing: border-box;
-}
+
 footer{
     background:#ffe3b3;
     color:rgb(5, 5, 5);
-    clear:both;
-    padding:10px 0px;
-    text-align: center;
+    padding:10px;
+    margin: 0px auto;
+    width: 60%;
 }
+
 section {
     width: 90%;
 
-}
-form{
-    margin: 1%;
 }
 div.product-card {
     width: 280px;
@@ -112,11 +92,10 @@ div.logotipo{
     float:left
 }
 div.titulo{
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 50px;
-    padding-right:300px;
     border: 2px solid #000 ;
-    width: 700px;
+    width: 100%;
     background: #ffe3b3;
 }
 div.titulo h1{
@@ -126,7 +105,7 @@ div.titulo h1{
     height: auto;
     color:#080808;
     font-family: "Times New Roman";
-    text-align:right;
+    text-align:center;
 }
 
 #lista-carrito h3{
@@ -139,11 +118,11 @@ div.titulo h1{
  text-align: center;
  font-size: 23px;
 }
-nav ul li.carrit{
-    background-color:#6566a5;
+.menu ul li.carrit{
+    background-color:#636491;
 }
-nav ul li.carrit :hover{
-    background-color:#8081c4;
+.menu ul li.carrit :hover{
+    background-color:#8e8fb8;
 }
 .info{
     background-color: rgb(201, 228, 245);
@@ -168,4 +147,103 @@ p{
 }
 .body{
     background-color: #5aa5b8;
+    font-family: 'Montserrat', sans-serif;
+	min-height: 100vh;
+}
+
+.contenedor {
+	max-width: 1200px;
+	width: 90%;
+    height: 700px;
+	margin: auto;
+}
+
+/* --- --- CAROUSEL --- --- */
+.carousel__contenedor {
+	position: relative;
+    width: 100%;
+    border: 2px solid #000;
+}
+.carousel__lista .carousel__elemento img{
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    padding-top: 20px;
+}
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background:#000;
+	color: #fff;
+	opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -30px;
+}
+
+.carousel__siguiente {
+	right: -30px;
+}
+
+.carousel__lista {
+	overflow: hidden;
+}
+
+.carousel__elemento {
+	text-align: center;
+    background: #26798e;
+}
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #fff;
+	opacity: .2;
+	border-radius: 2;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		padding: 40px 0;
+	}
+
+	.contenido-principal {
+		flex-direction: column;
+	}
+
+	.contenido-principal > * {
+		width: 100%;
+	}
+}
+
+#car1 p{
+    font-size: 30px;
+    text-align: left;
+    font-weight: 1000;
+    padding: 10px;
+    font-style:italic;
+    color: white;
 }

@@ -2,6 +2,7 @@ async function fetchProductos() {
   const resp = await fetch("/2da Pre Entrega/data.json");
   return await resp.json();
 }
+
 let catalogo=[]
 
 let celulares = [];

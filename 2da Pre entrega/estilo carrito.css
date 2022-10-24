@@ -99,25 +99,26 @@ header nav{
     background: #26798e;
 }
 
-div.total h2{
+div.totalC h2{
     background: #ffe3b3;
     padding: 10px;
     display: inline-block;
     text-align: left;
 }
 
-div.total{
+div.totalC{
     margin-bottom: 100px;
     background-color: #ffe3b3;
     border: 2px solid #000 ;
     width: 65%;
     margin-left: 380px;
+    position: fixed;
 }
-div.total .confirm{
+div.totalC .confirm{
     font-size: 15px;
     margin-left: 800px;
 }
-div.total .confirm:hover {
+div.totalC .confirm:hover {
     background-color: #79a7b1;
     color:#000
 }
@@ -146,5 +147,8 @@ p{
 }
 .carrit{
     width: 127px;
+    text-align: center;
+}
+h5{
     text-align: center;
 }

@@ -1,7 +1,8 @@
 let section = document.getElementById("objetos");
 let temp = document.querySelector("template");
 let card = temp.content.querySelector("div");
-let total = 0
+let subtotal=JSON.parse(localStorage.getItem("total"))
+let total= 0
 
 //Funcion agregar carrito
 const agregarCelCarrito=(prodId)=>{
@@ -43,7 +44,6 @@ function cardProduct(array,card){
       })
       }
     })
-
     cardClonada.querySelector(".btnAgregado").addEventListener("click",()=>{
       if(producto.stock>0){
         if(producto.producto=="celular"){
@@ -57,7 +57,8 @@ function cardProduct(array,card){
       localStorage.setItem("cart",JSON.stringify(carrito))
       sessionStorage.setItem("stock",JSON.stringify(producto.stock))
       total +=producto.precio
-      sessionStorage.setItem("totalCart",JSON.stringify(total))
+      localStorage.setItem("total",JSON.stringify(total))
+      
       }else if(producto.stock===0){
         cardClonada.querySelector(".btnAgregado").textContent="Sin Stock"
       }

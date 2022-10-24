@@ -1,7 +1,9 @@
 let showcart = JSON.parse(localStorage.getItem("cart"));
+let showTotal= JSON.parse(localStorage.getItem("total"))
 let sectionCart = document.getElementById("objetosCart");
 let tempCart = document.querySelector("template");
 let cardCart = tempCart.content.querySelector("div");
+
 
 //Funcion eliminar del carrito
 const eliminarCart = (prodId)=>{
@@ -26,25 +28,16 @@ carrito.forEach((producto) => {
     cardCartClonada.remove()
     producto.stock++
     sessionStorage.setItem("stock",JSON.stringify(producto.stock))
-    total -= producto.precio
+    showTotal -= producto.precio
+    localStorage.setItem("total",JSON.stringify(showTotal))
     localStorage.setItem("cart",JSON.stringify(carrito))
-    sessionStorage.setItem("totalCart",JSON.stringify(total))
+    totalC.innerHTML=(`Total a pagar:$ ${showTotal}`)
   })
-  })
-}
-//Mostramos los productos del carrito
-actualizarCarrito()
-
-let section2 = document.getElementById("totalCart");
-let temp2 = document.getElementById("templ");
-let totalCarrito = temp2.content.querySelector("div");
-
-carrito.forEach((producto) => {
-  section2.appendChild(totalCarrito);
-  total +=producto.precio
-  totalCarrito.children[0].innerText = `Total a pagar: $${total}`;
-  totalCarrito.querySelector(".confirm").innerText = "CONFIRMAR COMPRA";
-  totalCarrito.querySelector(".confirm").addEventListener("click", () => {
+  
+  const totalC=document.querySelector(".total")
+  totalC.innerText=(`Total a pagar:$ ${showTotal}`)
+  const confirmar=document.querySelector(".confirm")
+  confirmar.addEventListener("click", () => {
     Swal.fire({
       icon: 'success',
       title: 'COMPRA CONFIRMADA',
@@ -52,11 +45,7 @@ carrito.forEach((producto) => {
       footer: '<a href="./main.html">Seguir comprando</a>'
     })
   });
-});
-  
-let vaciarCart= document.querySelector(".vaciar")
-
-vaciarCart.addEventListener("click",()=>{
-  carrito.length=0
-  actualizarCarrito()
-})
+  })
+}
+//Mostramos los productos del carrito
+actualizarCarrito()
