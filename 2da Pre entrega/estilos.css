@@ -73,7 +73,7 @@ form button:hover{
     color: rgb(0, 0, 0);
 }
 div.product-card img{
-    width: 60%;
+    width: 70%;
     height: 250px;
     object-fit: cover;
 }
@@ -85,15 +85,14 @@ div.product-card .btnAgregado{
 div.logotipo img{
     width: 200px;
     margin-left: 30px;
-    margin-top: -80px;
 }
 div.logotipo{
-    width: 300px;
-    float:left
+    width: 30px;
+    float: left;
 }
 div.titulo{
-    margin-top: 80px;
-    margin-bottom: 50px;
+    margin-top: 60px;
+    margin-bottom: 10px;
     border: 2px solid #000 ;
     width: 100%;
     background: #ffe3b3;
@@ -148,12 +147,12 @@ p{
 .body{
     background-color: #5aa5b8;
     font-family: 'Montserrat', sans-serif;
-	min-height: 100vh;
+    min-height: 100vh;
 }
 
 .contenedor {
 	max-width: 1200px;
-	width: 90%;
+	width: 80%;
     height: 700px;
 	margin: auto;
 }
@@ -166,7 +165,7 @@ p{
 }
 .carousel__lista .carousel__elemento img{
     width: 40%;
-    height: auto;
+    height: 450px;
     object-fit: cover;
     padding-top: 20px;
 }
@@ -205,7 +204,7 @@ p{
 
 .carousel__elemento {
 	text-align: center;
-    background: #26798e;
+    background: #cfd1e6;
 }
 
 .carousel__indicadores .glider-dot {
@@ -239,11 +238,14 @@ p{
 	}
 }
 
-#car1 p{
+.contenedor p{
     font-size: 30px;
     text-align: left;
     font-weight: 1000;
     padding: 10px;
     font-style:italic;
-    color: white;
+    color: rgb(0, 0, 0);
+}
+.ofert p{
+    text-align: center;
 }

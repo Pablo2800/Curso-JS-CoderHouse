@@ -29,8 +29,8 @@ div.product-card .btnAgregado:hover{
     color: rgb(5, 5, 5);
 }
 div.product-card img{
-    width: 60%;
-    height: 150px;
+    width: 70%;
+    height: 250px;
     object-fit: cover;
 }
 .barra label{
@@ -151,4 +151,12 @@ p{
 }
 h5{
     text-align: center;
+}
+.enviar{
+    width: 30%;
+    height: 30px;
+    margin: 10px;
+}
+.swal2-input{
+    width: 60%;
 }

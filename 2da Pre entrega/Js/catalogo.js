@@ -24,22 +24,39 @@ elemento.addEventListener("click",()=>{
   catalogo.forEach(()=> {
     Swal.fire({
      title:catalogo[posicion].marca+" "+catalogo[posicion].modelo,
-     imageUrl:"/2da Pre entrega/Imagenes auriculares/1.png",
+     imageUrl:`${catalogo[posicion].imagen}`,
      html:`<p><del>Antes: $${catalogo[posicion].precio+1000}</del></p>`+
      `<p>Ahora: $${catalogo[posicion].precio}</p>`+
      `<p>${catalogo[posicion].data}</p>`+
     `<p>Para mas informacion</p>`+
-    `<button class="btnAgregar"><a href="./Auriculares.html">Ir a catalogo auriculares</button>`,
+    `<button class="btnAgregar"><a href="./Auriculares.html"}">Ir a catalogo ${catalogo[posicion].producto}</button>`,
     imageHeight:250,
+    background:`#c5c8e7`
   })
   });
 })
 }
-
+function ofertaTab(elemento,posicion){
+  elemento.addEventListener("click",()=>{
+    catalogo.forEach(()=> {
+      Swal.fire({
+       title:catalogo[posicion].marca+" "+catalogo[posicion].modelo,
+       imageUrl:`${catalogo[posicion].imagen}`,
+       html:`<p><del>Antes: $${catalogo[posicion].precio+1000}</del></p>`+
+       `<p>Ahora: $${catalogo[posicion].precio}</p>`+
+       `<p>${catalogo[posicion].data}</p>`+
+      `<p>Para mas informacion</p>`+
+      `<button class="btnAgregar"><a href="./Tablets.html"}">Ir a catalogo ${catalogo[posicion].producto}</button>`,
+      imageHeight:250,
+      background:`#c5c8e7`
+    })
+    });
+  })
+  }
 const c2=document.querySelector("#car2")
 const c3=document.querySelector("#car3")
 const c4=document.querySelector("#car4")
-ofertaCel(c2,3)
+ofertaTab(c2,22)
 ofertaCel(c3,7)
 ofertaCel(c4,9)
 function ofertaCel(elemento,posicion){
@@ -47,13 +64,14 @@ elemento.addEventListener("click",()=>{
   catalogo.forEach(()=> {
     Swal.fire({
      title:catalogo[posicion].marca+" "+catalogo[posicion].modelo,
+     background:`#c5c8e7`,
      imageUrl:`${catalogo[posicion].imagen}`,
      html:`<p><del>Antes: $${catalogo[posicion].precio+10000}</del></p>`+
      `<p>Ahora: $${catalogo[posicion].precio}</p>`+
      `<p>${catalogo[posicion].camara}</p>`+
     `<p>Para mas informacion</p>`+
     `<button class="btnAgregar"><a href="./${catalogo[posicion].marca}.html">Ir a catalogo ${catalogo[posicion].marca}</button>`,
-    imageHeight:250,
+    imageHeight:250
   })
 });
 })

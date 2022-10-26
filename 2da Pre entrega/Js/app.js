@@ -12,23 +12,23 @@ fetchProductos().then((productos) => {
     return productos.producto=="celular"
   });
 
-  const samsung = celulares.filter((product) => {
+  const samsung = productos.filter((product) => {
     return product.marca == "Samsung";
   });
   
-  const motorola = celulares.filter((product) => {
+  const motorola = productos.filter((product) => {
     return product.marca == "Motorola";
   });
   
-  let iPhone = celulares.filter((product) => {
-    return product.marca == "iPhone";
+  let iPhone = productos.filter((product) => {
+    return product.marca == "iPhone" || product.marca == "Apple";
   });
   
-  let xiaomi = celulares.filter((product) => {
+  let xiaomi = productos.filter((product) => {
     return product.marca == "Xiaomi";
   });
   
-  let huawei = celulares.filter((product) => {
+  let huawei = productos.filter((product) => {
     return product.marca == "Huawei";
   });
   
@@ -47,10 +47,14 @@ fetchProductos().then((productos) => {
       return productos.producto=="auricular"
 
     });
-    const auricular = auriculares.filter((product) => {
-      return product.producto == "auricular";
-    });
-
-    sessionStorage.setItem("auriculares",JSON.stringify(auricular));
+    sessionStorage.setItem("auriculares",JSON.stringify(auriculares));
 
 });
+
+tablets=[]
+fetchProductos().then((productos) => {
+  tablets = productos.filter((productos)=>{
+    return productos.producto=="tablet"
+  });
+  sessionStorage.setItem("tablets",JSON.stringify(tablets))
+})
