@@ -32,11 +32,6 @@ carrito.forEach((producto) => {
     localStorage.setItem("total",JSON.stringify(showTotal))
     localStorage.setItem("cart",JSON.stringify(carrito))
     totalC.innerHTML=(`Total a pagar:$ ${showTotal}`)
-        //Eliminar el div total si el total es 0
-const deleteTotal=document.querySelector(".totalC")
-if (showTotal==0) {
-  deleteTotal.remove()
-}
   })
   //Mostrar el total del carrito
   const totalC=document.querySelector(".total")

@@ -1,6 +1,21 @@
 fetchProductos().then((productos)=>{
     catalogo=productos
     cardProduct(catalogo,card)
+    function MostrarPrecios(n_ofer,product){
+      if(catalogo[product].producto=="tablet" || catalogo[product].producto=="auricular"){
+    n_ofer.querySelector(".precio_ant").innerHTML=`<del>Precio anterior:$${catalogo[product].precio+1000}</del>`
+    n_ofer.querySelector(".precio_act").innerHTML=`Precio actual:$${catalogo[product].precio}`
+    }
+    else if(catalogo[product].producto=="celular"){
+    n_ofer.querySelector(".precio_ant").innerHTML=`<del>Precio anterior:$${catalogo[product].precio+10000}</del>`
+    n_ofer.querySelector(".precio_act").innerHTML=`Precio actual:$${catalogo[product].precio}`
+  }
+  }
+    MostrarPrecios(c1,12)
+    MostrarPrecios(c2,22)
+    MostrarPrecios(c3,7)
+    MostrarPrecios(c4,9)
+    MostrarPrecios(c5,16)
   })
 
 window.addEventListener("load",function(){
@@ -16,9 +31,16 @@ window.addEventListener("load",function(){
 })
 
 const c1=document.querySelector("#car1")
+const c2=document.querySelector("#car2")
+const c3=document.querySelector("#car3")
+const c4=document.querySelector("#car4")
 const c5=document.querySelector("#car5")
 ofertaAur(c1,12)
+ofertaTab(c2,22)
+ofertaCel(c3,7)
+ofertaCel(c4,9)
 ofertaAur(c5,16)
+//Mostrar los auriculares en oferta
 function ofertaAur(elemento,posicion){
 elemento.addEventListener("click",()=>{
   catalogo.forEach(()=> {
@@ -36,6 +58,7 @@ elemento.addEventListener("click",()=>{
   });
 })
 }
+//Mostrar las tablets en oferta
 function ofertaTab(elemento,posicion){
   elemento.addEventListener("click",()=>{
     catalogo.forEach(()=> {
@@ -53,12 +76,7 @@ function ofertaTab(elemento,posicion){
     });
   })
   }
-const c2=document.querySelector("#car2")
-const c3=document.querySelector("#car3")
-const c4=document.querySelector("#car4")
-ofertaTab(c2,22)
-ofertaCel(c3,7)
-ofertaCel(c4,9)
+  //Mostrar los celulares en oferta
 function ofertaCel(elemento,posicion){
 elemento.addEventListener("click",()=>{
   catalogo.forEach(()=> {
@@ -76,3 +94,5 @@ elemento.addEventListener("click",()=>{
 });
 })
 }
+
+

@@ -240,12 +240,21 @@ p{
 
 .contenedor p{
     font-size: 30px;
-    text-align: left;
     font-weight: 1000;
-    padding: 10px;
     font-style:italic;
     color: rgb(0, 0, 0);
 }
 .ofert p{
     text-align: center;
+}
+.contenedor .precio_act{
+    font-size: 20px;
+    text-align: right;
+    margin: 5px;
+    
+}
+.contenedor .precio_ant{
+    font-size: 15px;
+    text-align: right;
+    margin: 5px;
 }

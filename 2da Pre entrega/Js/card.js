@@ -3,7 +3,6 @@ let temp = document.querySelector("template");
 let card = temp.content.querySelector("div");
 let subtotal=JSON.parse(localStorage.getItem("total"))
 let total= 0
-
 //Funcion agregar carrito
 const agregarCelCarrito=(prodId)=>{
   const item=celulares.find((prod)=>prod.id===prodId)
@@ -28,39 +27,40 @@ function cardProduct(array,card){
     cardClonada.children[2].src = producto.imagen;
     cardClonada.children[1].innerText = producto.modelo;
     cardClonada.children[3].innerText = "Precio:$" + producto.precio;
-    cardClonada.querySelector(".btnAgregado").innerText="Añadir al carrito"
-    cardClonada.querySelector(".info").innerHTML=`<button class="info"><i class="fa-solid fa-circle-info"></i></button>`
-    cardClonada.querySelector(".info").addEventListener("click", () => {
+    //Si el usuario clickea la card muestra informacion
+    cardClonada.children[2].addEventListener("click",()=>{
       if(producto.producto=="celular"){
-      Swal.fire({
-          html:
-          `<li>${producto.camara}</li>
-          <li>${producto.caracteristicas}</li>
-          <li>Bateria: ${producto.bateria}</li>
-          <li>Memoria de ${producto.memoria}</li>`,
-          background:`#c5c8e7`
-      })}else if(producto.producto=="auricular"){
         Swal.fire({
-          html:
-          `<li>${producto.data}</li>
-          <li>${producto.data2}</li>
-          <li>${producto.data3}</li>
-          <li>${producto.data4}</li>`,
-          background:`#c5c8e7`,
-      })
-      }else if(producto.producto=="tablet"){
-        Swal.fire({
-          html:
-          `<li>${producto.data}</li>
-          <li>${producto.data2}</li>
-          <li>${producto.data3}</li>
-          <li>${producto.data4}</li>`,
-          background:`#c5c8e7`,
-      })
-      }
-      
+            imageUrl:`${producto.imagen}`,
+            html:
+            `<li>${producto.camara}</li>
+            <li>${producto.caracteristicas}</li>
+            <li>Bateria: ${producto.bateria}</li>
+            <li>Memoria de ${producto.memoria}</li>`,
+            background:`#c5c8e7`
+        })}else if(producto.producto=="auricular"){
+          Swal.fire({
+            imageUrl:`${producto.imagen}`,
+            html:
+            `<li>${producto.data}</li>
+            <li>${producto.data2}</li>
+            <li>${producto.data3}</li>
+            <li>${producto.data4}</li>`,
+            background:`#c5c8e7`,
+        })
+        }else if(producto.producto=="tablet"){
+          Swal.fire({
+            imageUrl:`${producto.imagen}`,
+            html:
+            `<li>${producto.data}</li>
+            <li>${producto.data2}</li>
+            <li>${producto.data3}</li>
+            <li>${producto.data4}</li>`,
+            background:`#c5c8e7`,
+        })
+        }
     })
-    
+    cardClonada.querySelector(".btnAgregado").innerText="Añadir al carrito"
     cardClonada.querySelector(".btnAgregado").addEventListener("click",()=>{
       if(producto.stock>0){
         if(producto.producto=="celular"){
